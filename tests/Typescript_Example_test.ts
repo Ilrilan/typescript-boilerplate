@@ -1,9 +1,10 @@
+import { homePage, loginPage } from '../fixtures'
+
 Feature('Typescript Example');
 
-Scenario('test something', async ({ I, loginPage, homePage }) => {
+Scenario('test something', async () => {
   homePage.goToHome()
-  I.printMessage('Helper message')
+  console.log(`opened home`)
   loginPage.testMethod('Login Page')
-  await  loginPage.link()
-  I.printHelpers()
+  await loginPage.link()
 });
